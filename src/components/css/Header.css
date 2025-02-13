@@ -1,0 +1,215 @@
+/* Header.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(82, 82, 82, 0.5);
+  color: #333;
+  z-index: 1000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.header-wrapper.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.header-wrapper.top-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header-title {
+  padding-right: 90%;
+  padding-left: 10%;
+  padding-bottom: 10px;
+  font-family: Orbitron;
+  width: 500px;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .header-title {
+    font-size: 4rem;
+    background-color: black;
+    color: #f4f4f4;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-title {
+    font-size: 2rem;
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-title {
+    font-size: 2rem;
+    display: none;
+  }
+}
+
+.contact-info-header {
+  margin-top: 10%;
+  font-size: 1rem;
+}
+
+.contact-button {
+  font-family: Orbitron;
+  margin-right: 5%;
+}
+
+.header header {
+  height: 10%;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.link-style {
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  color: #0077B5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-center {
+  left: 0;
+  height: 10%;
+}
+
+.nav-center img {
+  margin-right: 40px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px; /* Adjust gap between items as needed */
+}
+
+.nav-links li {
+  margin-right: 0px;
+  padding: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 10px;
+  transition: color 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  color: #333;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.outsourced-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* Adjust gap between items as needed */
+}
+
+.outsourced-link button {
+  margin-left: -5%;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* Adjust gap between items as needed */
+}
+
+@media (max-width: 767px) {
+  .nav-links,
+  .outsourced-link,
+  .contact-info {
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .nav-links li,
+  .outsourced-link button,
+  .contact-info a {
+    padding: 5px;
+    font-size: 0.9rem; /* Adjust font size as needed */
+  }
+
+  .logo {
+    height: 40px; /* Adjust logo size as needed */
+  }
+
+  .outsourced-link button img,
+  .contact-info a .fa {
+    height: 30px; /* Adjust icon size as needed */
+  }
+}
