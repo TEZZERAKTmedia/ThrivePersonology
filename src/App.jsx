@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BackToTezzeraktBubble from './components/B2TezzeraktMedia';
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -16,7 +17,9 @@ function App() {
         <Router>
           <RedirectOnRefresh />
           <Header />
+
           <Routes>
+
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/calendar" element={<MyCalendar />} />

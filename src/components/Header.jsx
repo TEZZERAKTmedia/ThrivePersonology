@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import './css/Header.css';
+import BackToTezzeraktBubble from './B2TezzeraktMedia';
 import calendar from '../../assets/Calendar2.png';
 
 function Header() {
@@ -71,6 +72,7 @@ function Header() {
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>
+            <BackToTezzeraktBubble />
             
 
             
